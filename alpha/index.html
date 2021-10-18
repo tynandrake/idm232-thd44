@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,20 +18,35 @@
                     <img src="images/FOOD.svg" alt="logo">
                 </a>
             </div>
-            <div id="header-menu">
-                <ul>
-                    <li>
-                        <a href="about_me.html">Recipes</a>
-                    </li>
-                </ul>
+            <div class="header-menu">
+                <li>
+                    <a href="about_me.html">Recipes</a>
+                </li>
             </div>
-            <div id="search-bar">
+            <div id="search-bar" class="header-menu">
+                <li>
+                    <a href="">Search</a>
+                </li>
 
             </div>
         </div>
     </header>
-    <div id="hero">
-        
+    <div id="hero-image" class="hero">
+        <div id="hero-text-items">
+            <h1 class="large-title elsie">GRILLED SALMON</h1>
+            <h4 class="small-title">MEAL OF THE DAY</h4>
+            <button class="btn-recipe">
+                <a href="">VIEW RECIPE</a>
+                <img src="images/arrow-1.svg" alt="right arrow">
+            </button>
+        </div>
+    </div>
+    <div>
+        <h3>FEATURED RECIPES</h3>
+        <div>
+            <div id="side-image1"></div>
+            <p class="recipe-title">GRILLED SALMON & GREENS</p>
+        </div>
     </div>
 </body>
 </html>

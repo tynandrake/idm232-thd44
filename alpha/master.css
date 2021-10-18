@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+}
+.elsie {
+    font-family: Elsie;
+    font-weight: 900;
+}
+
+
+header{
+    display: flex;
+    height: 130px;
+    align-items: center;
+    padding: 0 140px;
+    border: 2px solid red;
+    /* position: absolute; */
+}
+header > div {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+search-bar {
+    float: right;
+}
+.header-menu li{
+    list-style: none;
+    padding-left: 80px;
+}
+.header-menu a{
+    color: #32DC8A;
+    text-decoration: none;
+    font-family: Elsie;
+    font-size: 24px;
+    font-weight: 900;
+}
+.hero {
+    z-index: -1;
+}
+#hero-image {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #000000 100%), 
+    url(images/hero.jpg);
+    height: 605px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#hero-text-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.large-title {
+    color: #32DC8A;
+    font-size: 100px;
+} 
+.small-title {
+    color: white;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 400;
+    letter-spacing: 0.175em;
+}
+.btn-recipe {
+    background-color: #32DC8A;
+    width: 150px;
+    height: 37px;
+    border: none;
+}
+.btn-recipe a{
+    color: black;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0.175em;
+}
