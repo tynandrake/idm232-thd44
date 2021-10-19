@@ -23,9 +23,12 @@ header > div {
     display: flex;
     align-items: center;
     height: 70px;
+    width: 100%;
+    position: relative;
 }
-search-bar {
-    float: right;
+#search-bar {
+  right: 0;
+  position: absolute;
 }
 .header-menu li{
     list-style: none;
