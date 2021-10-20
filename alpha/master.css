@@ -9,15 +9,21 @@ body {
     font-family: Elsie;
     font-weight: 900;
 }
+.roboto {
+    font-family: Roboto;
+}
+.roboto-title {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    color: #32DC8A;
+}
 
-
-header{
+/* Header / Footer*/
+.header-footer{
     display: flex;
-    height: 130px;
     align-items: center;
-    padding: 0 140px;
-    border: 2px solid red;
-    /* position: absolute; */
+    padding: 45px 250px;
 }
 header > div {
     display: flex;
@@ -25,10 +31,7 @@ header > div {
     height: 70px;
     width: 100%;
     position: relative;
-}
-#search-bar {
-  right: 0;
-  position: absolute;
+    
 }
 .header-menu li{
     list-style: none;
@@ -41,8 +44,38 @@ header > div {
     font-size: 24px;
     font-weight: 900;
 }
+.search-bar {
+    right: 0;
+    position: absolute;
+    border: 2px solid #32DC8A;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+.search-bar > form:nth-child(1) {
+    display: flex;
+    height: 40px;
+}   
+.search-bar input[type=text] {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    width: 165px;
+    height: 40px;
+    padding-left: 18px;
+}
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Hero */
 .hero {
-    z-index: -1;
+    position: relative;
 }
 #hero-image {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #000000 100%), 
@@ -51,17 +84,18 @@ header > div {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 #hero-text-items {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 240px;
 }
 .large-title {
     color: #32DC8A;
     font-size: 100px;
-} 
+    line-height: 85px;
+}
 .small-title {
     color: white;
     font-size: 18px;
@@ -74,6 +108,7 @@ header > div {
     width: 150px;
     height: 37px;
     border: none;
+    margin-top: 20px;
 }
 .btn-recipe a{
     color: black;
@@ -81,4 +116,150 @@ header > div {
     font-family: Roboto;
     font-size: 14px;
     letter-spacing: 0.175em;
+}
+
+/* HP Content */
+.hp-content {
+    margin-top: 60px;
+    padding: 0 250px;
+}
+.hp-content h3 {
+    text-align: center;
+    color: #32DC8A;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: 0.175em;
+}
+.recipe-card-small {
+    width: 280px;
+    height: 180px;
+    border: 1px solid red;
+}
+#side-image1 {
+    background-image: url(images/food1.jpg);
+}
+.recipe-card-large {
+    width: 485px;
+    height: 480px;
+    border: 1px solid red;
+    background-color: white;
+}
+.recipe-card-large > div{
+    padding: 20px;
+}
+.recipe-card-large img{
+    width: 100%;
+}
+.recipe-card-large h4{
+    font-size: 28px;
+}
+.recipe-card-large p{
+    font-size: 18px;
+}
+#side-image2 {
+    background-image: url(images/food2.jpg);
+}
+#hp-banner {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(#00000046, rgba(0, 0, 0, 0.219)),url(images/foodbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recipe-card-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: repeat(3, minmax(0,1fr));
+    justify-items: center;
+    grid-row-gap: 60px;
+}
+.grid-item {
+    width: 250px;
+    height: 250px;
+    background-image: url(images/food3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ease-in-out;
+}
+.grid-item:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+.detail-top {
+    padding: 0 250px;
+    height: 65vh;
+    display: flex;
+}
+#text-side {
+    color: #32DC8A;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#text-side h2 {
+    font-size: 60px;
+}
+#text-side h3 {
+    font-size: 34px;
+    font-weight: 300;
+    font-family: Roboto;
+    letter-spacing: 0.175em;
+}
+#image-side {
+    width: 50%;
+}
+#image-side li{
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+}
+
+
+.detail-content {
+    background-color: white;
+    padding-top: 50px;
+}
+.detail-subtitle {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.175em;
+    margin-bottom: 10px;
+}
+.detail-list {
+    padding-left: 25px;
+    line-height: 35px;
+}
+.detail-element {
+    margin-bottom: 40px;
+}
+
+
+.category-grid {
+    display: grid;
+    max-width: 75%;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-rows: repeat(4, minmax(0,1fr));
+    grid-row-gap: 50px;
+}
+
+.secondary-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #32DC8A;
+}
+#search-item {
+    color: white;
+}
+#search-bar-large {
+    position: relative;
+    width: 445px;
+}
+#search-bar-large input[type=text] {
+    width: 385px;
 }

@@ -12,27 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            <div id="header-logo">
-                <a href="index.html">
-                    <img src="images/FOOD.svg" alt="logo">
-                </a>
-            </div>
-            <div class="header-menu">
-                <li>
-                    <a href="about_me.html">Recipes</a>
-                </li>
-            </div>
-            <div id="search-bar" class="header-menu">
-                <li>
-                    <a href="">Search</a>
-                </li>
-
-            </div>
-        </div>
-    </header>
+    
     <div id="hero-image" class="hero">
+        <header class="header-footer">
+            <div>
+                <div id="header-logo">
+                    <a href="index.html">
+                        <img src="images/FOOD.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="header-menu">
+                    <li>
+                        <a href="about_me.html">Recipes</a>
+                    </li>
+                </div>
+                <div id="search-bar" class="header-menu">
+                    <form action="/">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><img src="images/search.svg" alt="search icon"></button>
+                    </form>
+                </div>
+            </div>
+        </header>        
         <div id="hero-text-items">
             <h1 class="large-title elsie">GRILLED SALMON</h1>
             <h4 class="small-title">MEAL OF THE DAY</h4>
@@ -42,12 +43,57 @@
             </button>
         </div>
     </div>
-    <div>
-        <h3>FEATURED RECIPES</h3>
+    <div class="hp-content">
+        <h3 class="roboto">FEATURED RECIPES</h3>
         <div>
-            <div id="side-image1"></div>
-            <p class="recipe-title">GRILLED SALMON & GREENS</p>
+            <div class="recipe-card-small" id="side-image1"></div>
+            <p class="roboto-title">GRILLED SALMON & GREENS</p>
+        </div>
+        <div>
+            <div class="recipe-card-large">
+                <img src="images/food4.jpg" alt="image of pasta">
+                <div>
+                    <h4 class="roboto">PASTA</h4>
+                    <p class="roboto">From hearty comfort foods like lasagna, chili, and meatloaf, 
+                        to lightened-up soups and stews, these are the easy, hands-off
+                        ground beef slow cooker recipes you'll want to have on hand for 
+                        busy weeknights.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="recipe-card-small" id="side-image2"></div>
+            <p class="roboto-title">GRILLED CHICKEN</p>
         </div>
     </div>
+    <div id="hp-banner">
+        <h1 class="large-title elsie">FISH DINNERS</h1>
+    </div>
+    <div class="hp-content">
+        <div class="recipe-card-grid">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </div>
+    <footer class="header-footer">
+        <div>
+            <img src="images/FOOD.svg" alt="logo">
+        </div>
+        <div class="header-menu" id="footer-item">
+            <li>
+                <a href="about_me.html">Recipes</a>
+            </li>
+        </div>
+    </footer>
 </body>
 </html>
