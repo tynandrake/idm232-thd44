@@ -19,7 +19,7 @@ body {
     color: #32DC8A;
 }
 
-/* Header / Footer*/
+/* Header / Footer */
 .header-footer{
     display: flex;
     align-items: center;
@@ -122,6 +122,7 @@ header > div {
 .hp-content {
     margin-top: 60px;
     padding: 0 250px;
+    max-width: 1200px;
 }
 .hp-content h3 {
     text-align: center;
@@ -133,7 +134,6 @@ header > div {
 .recipe-card-small {
     width: 280px;
     height: 180px;
-    border: 1px solid red;
 }
 #side-image1 {
     background-image: url(images/food1.jpg);
@@ -141,7 +141,6 @@ header > div {
 .recipe-card-large {
     width: 485px;
     height: 480px;
-    border: 1px solid red;
     background-color: white;
 }
 .recipe-card-large > div{
