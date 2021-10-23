@@ -12,20 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="hero-image" class="hero">
-        <header class="header-footer">
-            <div>
-                <div id="header-logo">
-                    <a href="index.html">
-                        <img src="images/FOOD.svg" alt="logo">
-                    </a>
-                </div>
-                <div class="header-menu">
-                    <li>
-                        <a href="categories.html">Recipes</a>
-                    </li>
-                </div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/FOOD.svg" alt="image of logo" >
+        </a>  
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+        </div>
+        <div class="nav-menu">
+            <div class="menu-items">
+                <a href="categories.html">Recipes</a>
                 <div class="search-bar">
                     <form action="/">
                         <input type="text" placeholder="Search" name="search">
@@ -33,7 +31,9 @@
                     </form>
                 </div>
             </div>
-        </header>        
+        </div>
+    </header>     
+    <div id="hero-image" class="hero">
         <div id="hero-text-items">
             <h1 class="large-title elsie">GRILLED SALMON</h1>
             <h4 class="small-title">MEAL OF THE DAY</h4>
@@ -44,7 +44,7 @@
         </div>
     </div>
     <div id="featuredRecipesHP" class="hp-content col-3">
-        <h3 class="roboto">FEATURED RECIPES</h3>
+        <h3 class="roboto">FEATURED RECIPE</h3>
         <div class="col-1-2">
             <div>
                 <div class="recipe-card-large">
@@ -91,30 +91,28 @@
     <div id="hp-banner">
         <h1 class="large-title elsie">FISH DINNERS</h1>
     </div>
-    <div class="hp-content">
-        <div class="recipe-card-grid">
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-        </div>
+    <div class="recipe-card-grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
     </div>
-    <footer class="header-footer">
-        <div>
+    <footer class="footer">
+        <div class="footer_name">
             <img src="images/FOOD.svg" alt="logo">
         </div>
-        <div class="header-menu" id="footer-item">
-            <li>
-                <a href="about_me.html">Recipes</a>
-            </li>
+        <div class="footer_icons">
+            <a href="#hero-text-items">
+                <img src="images/scroll-top.svg" alt="scroll to top" class="icons">
+            </a>
         </div>
     </footer>
 </body>

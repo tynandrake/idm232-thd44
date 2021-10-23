@@ -12,26 +12,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body> 
-    <header class="header-footer">
-        <div>
-            <div id="header-logo">
-                <a href="index.html">
-                    <img src="images/FOOD.svg" alt="logo">
-                </a>
-            </div>
-            <div class="header-menu">
-                <li>
-                    <a href="categories.html">Recipes</a>
-                </li>
-            </div>
-            <div class="header-menu search-bar">
-                <form action="/">
-                    <input type="text" placeholder="Search" name="search">
-                    <button type="submit"><img src="images/search.svg" alt="search icon"></button>
-                </form>
+    <header class="navbar" id="secondary-navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/FOOD.svg" alt="image of logo" >
+        </a>  
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+        </div>
+        <div class="nav-menu">
+            <div class="menu-items">
+                <a href="categories.html">Recipes</a>
+                <div class="search-bar">
+                    <form action="/">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><img src="images/search.svg" alt="search icon"></button>
+                    </form>
+                </div>
             </div>
         </div>
-    </header> 
+    </header>
     <div class="hp-content" id="category-content">
         <div>
             <h2 class="secondary-title roboto">Results for <span id="search-item">SALMON</span></h2>
@@ -43,9 +44,21 @@
             </form>
         </div>
         <div>
-            <div class=""></div>
+            <div class="search-card roboto">
+                <img src="images/food2.jpg" alt="">
+                <h3 class="search-title">GRILLED SALMON + GREENS</h3>
+            </div>
         </div>
     </div>
-        
+    <footer class="footer">
+        <div class="footer_name">
+            <img src="images/FOOD.svg" alt="logo">
+        </div>
+        <div class="footer_icons">
+            <a href="#hero-text-items">
+                <img src="images/scroll-top.svg" alt="scroll to top" class="icons">
+            </a>
+        </div>
+    </footer>    
 </body>
 </html>
