@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Recipe</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var maxField = 20; //Input fields increment limitation
+            var addButton = $('.add_button'); //Add button selector
+            var addButton2 = $('.add_button2');
+            var addButton3 = $('.add_button3');
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+            var wrapper2 = $('.field_wrapper2'); //Input field wrapper
+            var wrapper3 = $('.field_wrapper3'); //Input field wrapper
+            var fieldHTML = '<div><input type="text" name="field_name[]" value=""/><a href="javascript:void(0);" class="remove_button"><img src="images/delete.svg"/></a></div>'; //New input field html 
+            var x = 1; //Initial field counter is 1
+
+            //Once add button is clicked
+            $(addButton).click(function () {
+                //Check maximum number of input fields
+                if (x < maxField) {
+                    x++; //Increment field counter
+                    $(wrapper).append(fieldHTML); //Add field html
+                }
+            });
+
+            $(addButton2).click(function () {
+                //Check maximum number of input fields
+                if (x < maxField) {
+                    x++; //Increment field counter
+                    $(wrapper2).append(fieldHTML); //Add field html
+                }
+            });
+
+            $(addButton3).click(function () {
+                //Check maximum number of input fields
+                if (x < maxField) {
+                    x++; //Increment field counter
+                    $(wrapper3).append(fieldHTML); //Add field html
+                }
+            });
+
+            //Once remove button is clicked
+            $(wrapper).on('click', '.remove_button', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+
+            $(wrapper2).on('click', '.remove_button', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+
+            $(wrapper3).on('click', '.remove_button', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+        });
+    </script>
+
+</head>
+
+<body id="add-recipe">
+    <header class="navbar" id="secondary-navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/FOOD.svg" alt="image of logo">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+        </div>
+        <div class="nav-menu">
+            <div class="menu-items">
+                <a href="categories.html">Recipes</a>
+                <div class="search-bar">
+                    <form action="/">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><img src="images/search.svg" alt="search icon"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hp-content" id="category-content">
+        <div>
+            <h2 class="secondary-title roboto">Add/Edit Recipe</h2>
+            <form action="/" method="GET" id="addRecipe">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="recipeTitle">
+
+                <label for="imageFile">Add File</label>
+                <input type="file" id="imageFile" name="recipeImage" placeholder="Insert Image:">
+
+            <div class="field_wrapper wrapper-style">
+                <label for="ingredients">Ingredients:</label>
+                <div>
+                    <input type="text" id="ingredientList" name="recipeIngredients" placeholder="Ingredient 1">
+                    <a href="javascript:void(0);" class="add_button add_button-style" title="Add Field"><img src="images/add.svg" alt="add button"></a>
+                </div>
+            </div>
+
+            <div class="field_wrapper2 wrapper-style">
+                <label for="instructions">Instructions:</label>
+                <div>
+                    <input type="text" id="instructionList" name="recipeInstructions" placeholder="Step 1">
+                    <a href="javascript:void(0);" class="add_button2 add_button-style" title="Add Field"><img src="images/add.svg" alt="add button"></a>
+                </div>
+            </div>
+
+            <div class="field_wrapper3 wrapper-style">
+                <label for="nutrition">Nutrition:</label>
+                <div>
+                    <input type="text" id="nutritionList" name="recipeNutrition">
+                    <a href="javascript:void(0);" class="add_button3 add_button-style" title="Add Field"><img src="images/add.svg" alt="add button"></a>
+                </div>
+            </div>
+                <label for="details">Additional Details:</label>
+                <input type="text" id="recipeDetails" name="recipeDetails">
+            </form>
+
+            <button type="submit" form="addRecipe" value="Submit">Confirm Recipe</button>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="footer_name">
+            <img src="images/FOOD.svg" alt="logo">
+        </div>
+        <div class="footer_icons">
+            <a href="#hero-text-items">
+                <img src="images/scroll-top.svg" alt="scroll to top" class="icons">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
