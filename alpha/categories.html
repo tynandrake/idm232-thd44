@@ -12,18 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body> 
-    <header class="navbar" id="secondary-navbar">
+    <header class="navbar">
         <div class="logo">
             <a href="index.html">
-            <img src="images/FOOD.svg" alt="image of logo" >
-        </a>  
+                <img src="images/FOOD.svg" alt="image of logo">
+            </a>
         </div>
         <div class="menu-btn">
             <div class="menu-btn_burger"></div>
         </div>
         <div class="nav-menu">
-            <div class="menu-items">
+            <div class="menu-items hover-style">
                 <a href="categories.html">Recipes</a>
+                <a href="search-result.html">Search</a>
                 <div class="search-bar">
                     <form action="/">
                         <input type="text" placeholder="Search" name="search">
@@ -32,10 +33,18 @@
                 </div>
             </div>
         </div>
-    </header> 
+    </header>
     <div class="hp-content" id="category-content">
         <div>
-            <h1 class="large-title elsie" id="category-title">CATEGORIES</h1>
+            <div>
+                <h1 class="large-title elsie" id="category-title">CATEGORIES</h1>
+            </div>
+            <div class="filter-btn">
+                <div>
+                    <h4 class="roboto filter-btn-text">FILTER</h4>
+                    <img src="images/arrow-1.svg" alt="image of arrow">
+                </div>
+            </div>
         </div>
         <div class="category-grid">
             <div class="grid-item"></div>
@@ -54,7 +63,7 @@
             <img src="images/FOOD.svg" alt="logo">
         </div>
         <div class="footer_icons">
-            <a href="#hero-text-items">
+            <a href="#category-content">
                 <img src="images/scroll-top.svg" alt="scroll to top" class="icons">
             </a>
         </div>
