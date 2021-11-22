@@ -400,7 +400,6 @@ button:hover {
     padding: 0px 36px;
 }
 #image-side li {
-    background-image: url(images/hero.jpg);
     background-size: 160%;
     background-position: center;
     background-repeat: no-repeat;
@@ -434,9 +433,6 @@ button:hover {
 #category-title {
     text-align: left;
 }
-/* #category-content div:first-child {
-    display: flex;
-} */
 .filter-btn {
     background-color: #32DC8A;
     width: 220px;
@@ -528,9 +524,9 @@ button:hover {
     width: 100px;
 }
 .master-recipe-card-image li {
-    background-image: url(images/food3.jpg);
     background-size: cover;
     background-position: center;
+    list-style-type: none; 
     height: 100px;
 }
 .master-recipe-card-text {
@@ -572,6 +568,14 @@ button:hover {
     font-weight: 700;
     font-size: 18px;
 }
+.add-recipe-note {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.add-text {
+    width: 50%;
+    min-height: 70px;
+}
 .wrapper-style > div:nth-child(2) {
     display: flex;
     align-items: center;
@@ -610,8 +614,6 @@ button:hover {
     margin-bottom: 20px;
 }
 #recipeDetails {
-    width: 100%;
-    height: 200px;
     margin-bottom: 20px;
 }
 

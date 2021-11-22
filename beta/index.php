@@ -1,7 +1,7 @@
 <?php
 $page_title = 'Home';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php';
+include_once 'global/header.php';
 
 ?>
 
@@ -9,6 +9,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php';
 <html>
 
 <body>
+
     <div id="hero-image" class="hero">
         <div id="hero-text-items">
             <a href="recipe-detail.html">
@@ -16,7 +17,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php';
             </a>
             <h4 class="small-title">MEAL OF THE DAY</h4>
             <button class="btn-recipe" onclick="location.href='users/recipe-detail.php'">
-                <a href="/users/recipe-detail.php">VIEW RECIPE</a>
+                <a href="users/recipe-detail.php">VIEW RECIPE</a>
                 <img src="images/arrow-1.svg" alt="right arrow">
             </button>
         </div>

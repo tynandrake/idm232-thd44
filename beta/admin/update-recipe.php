@@ -2,7 +2,7 @@
 $page_title = 'Update Recipe';
 $body_class = 'add-recipe';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php';
+include_once '../global/adminHeader.php';
 
 
 if (isset($_POST['update'])) {
@@ -20,7 +20,6 @@ if (isset($_POST['update'])) {
     $imageBase64 = $_POST['imageBase64'];
 
     // Build Query
-    // $sql = mysqli_query($con, "UPDATE recipe SET recipeTitle='$title', recipeDetails='$recipeDetails', recipeIngredients='$recipeIngredients', recipeInstructions='$recipeInstructions', recipeNutrition='$recipeNutrition' WHERE id='$recipe_id'") or die($sql->error());
     $sql = 'UPDATE recipe SET ';
     $sql .= "recipeTitle = '{$title}', ";
     $sql .= "recipeDetails = '{$recipeDetails}', ";
@@ -86,29 +85,30 @@ if (isset($_POST['update'])) {
 
             <div class="field_wrapper wrapper-style">
                 <label for="ingredients">Ingredients:</label>
+                <p class="roboto add-recipe-note">Use the '|' (vertical bar) key to add new ingredient</p>
                 <div>
-                    <input type="text" id="ingredientList" name="recipeIngredients" placeholder="Ingredient 1" value="<?php echo $user['recipeIngredients']; ?>">
+                    <textarea class="add-text" type="text" id="ingredientList" name="recipeIngredients"><?php echo $user['recipeIngredients']; ?></textarea>
                 </div>
             </div>
 
             <div class="field_wrapper2 wrapper-style">
                 <label for="instructions">Instructions:</label>
+                <p class="roboto add-recipe-note">Use the '|' (vertical bar) key to add new instruction</p>
                 <div>
-                    <input type="text" id="instructionList" name="recipeInstructions" placeholder="Step 1" value="<?php echo $user['recipeInstructions']; ?>">
+                    <textarea class="add-text" type="text" id="instructionList" name="recipeInstructions"><?php echo $user['recipeInstructions']; ?></textarea>
                 </div>
             </div>
 
             <div class="field_wrapper3 wrapper-style">
                 <label for="nutrition">Nutrition:</label>
                 <div>
-                    <input type="text" id="nutritionList" name="recipeNutrition" value="<?php echo $user['recipeNutrition']; ?>">
+                    <textarea class="add-text" type="text" id="nutritionList" name="recipeNutrition"><?php echo $user['recipeNutrition']; ?></textarea>
                 </div>
             </div>
             <label for="details">Additional Details:</label>
-            <textarea id="recipeDetails" name="recipeDetails" value="<?php echo $user['recipeDetails']; ?>">
-            </textarea>
+            <textarea class="add-text" id="recipeDetails" name="recipeDetails"><?php echo $user['recipeDetails']; ?></textarea>
             <input type="hidden" value="<?php echo $user['id']; ?>" name="recipe_id">
-            <input type="hidden" name="imageBase64" id="imageBase64" value="<?php echo $user['recipeImage']; ?>"/>
+            <input type="hidden" name="imageBase64" id="imageBase64" value="<?php echo $user['recipeImage']; ?>" />
             <button type="submit" value="Submit" name="update">Update Recipe</button>
         </form>
     </div>

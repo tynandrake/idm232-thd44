@@ -30,7 +30,7 @@ if (isset($body_class)) {
     <header class="navbar" id="secondary-navbar">
         <div class="logo">
             <a href="../index.php">
-                <img src="./images/FOOD.svg" alt="image of logo">
+                <img src="../images/FOOD.svg" alt="image of logo">
             </a>
         </div>
         <div class="menu-btn">
@@ -38,9 +38,9 @@ if (isset($body_class)) {
         </div>
         <div class="nav-menu">
             <div class="menu-items hover-style">
-                <a href="./users/category.php">Recipes</a>
-                <a href="./admin/all-recipes.php">All Recipes (a)</a>
-                <a href="./admin/add-recipe.php">Add Recipe (a)</a>
+                <a href="../users/category.php">Recipes</a>
+                <a href="../admin/all-recipes.php">All Recipes (a)</a>
+                <a href="../admin/add-recipe.php">Add Recipe (a)</a>
                 <a href="search-result.html">Search</a>
                 <div class="search-bar">
                     <form action="/">

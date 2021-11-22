@@ -1,7 +1,7 @@
 <?php
 $page_title = 'Category';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php'; ?>
+include_once '../global/adminHeader.php'; ?>
 
 <html>
 

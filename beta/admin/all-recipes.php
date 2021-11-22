@@ -1,7 +1,7 @@
 <?php
 $page_title = 'All-Recipes';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/global/header.php';
+include_once '../global/adminHeader.php';
 
 
 $sql = 'SELECT id, recipeTitle ';
@@ -28,7 +28,7 @@ $db_results = mysqli_query($con, $sql);
             <?php
 
             if ($db_results && $db_results->num_rows > 0) {
-                include $_SERVER['DOCUMENT_ROOT'] . '/components/card.php';
+                include '../components/card.php';
             } else {
                 echo '<p>There are currently no users in the database</p>';
             }
