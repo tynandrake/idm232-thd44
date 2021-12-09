@@ -38,7 +38,7 @@ $query = $_GET['recipeSearchUser'];
                 </div>
 
                 <div class=' master-recipe-card-text'>
-                    <a href='../users/recipe-detail.php?id=" . $id . "'>
+                    <a href='./users/recipe-detail.php?id=" . $id . "'>
                         <h4 class='master-recipe-title'>" . $recipeTitle . "</h4>
                     </a>
                 </div>

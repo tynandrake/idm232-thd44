@@ -27,7 +27,7 @@ if (isset($body_class)) {
 <body id="<?php echo $body_class; ?>">
     <header class="navbar" id="secondary-navbar">
         <div class="logo">
-            <a href="../index.php">
+            <a href="./index.php">
                 <img src="./images/FOOD.svg" alt="image of logo">
             </a>
         </div>

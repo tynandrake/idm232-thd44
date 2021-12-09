@@ -88,7 +88,7 @@ $db_results = mysqli_query($con, $sql);
 
     </div>
     <div id="hp-banner">
-        <a href="../users/category.php">
+        <a href="./users/category.php">
             <h1 class="large-title elsie">CATEGORIES</h1>
         </a>
     </div>

@@ -1,9 +1,9 @@
 <?php
 
 $dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "root";
-$dbname = "local_idm232_recipe";
+$dbuser = "tynandra_admin";
+$dbpass = "Srx7bmw27@";
+$dbname = "tynandra_idm232";
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (mysqli_connect_error()) {

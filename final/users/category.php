@@ -35,84 +35,84 @@ $db_results = mysqli_query($con, $sql);
     <div class="recipe-card-grid">
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
         ?>
         <?php
         if ($db_results && $db_results->num_rows > 0) {
-            include '../components/hp-card-square.php';
+            include '../components/category-card-square.php';
         } else {
             echo '<p>There are currently no users in the database</p>';
         }
