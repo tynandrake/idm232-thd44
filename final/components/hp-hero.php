@@ -1,7 +1,7 @@
 <?php
 $row = mysqli_fetch_assoc($db_results);
 ?>
-<div id="hero-image" class="hero" style='background: url("<?php echo $row['recipeImage']; ?>"); background-size: cover; list-style-type: none; background-position: center; ")'>
+<div id="hero-image" class="hero" style='background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #000000 100%), url("<?php echo $row['recipeImage']; ?>"); background-size: cover; list-style-type: none; background-position: center; ")'>
     <div id="hero-text-items">
         <a href="./users/recipe-detail.php?id=<?php echo $row['id']; ?>">
             <h1 class="large-title elsie"><?php echo $row['recipeTitle']; ?></h1>
