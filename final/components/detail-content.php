@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
             <h2 class="elsie"><?php echo $row['recipeTitle']; ?></h2>
         </div>
         <div id="image-side">
-            <li style='background: url("<?php echo $row['recipeImage'];?>"); background-size: cover; list-style-type: none; ")'></li>
+            <li style='background: url("<?php echo $row['recipeImage'];?>"); background-size: cover; background-position: center; list-style-type: none; ")'></li>
         </div>
     </div>
     <div class="detail-content">
@@ -32,14 +32,14 @@ while ($row = mysqli_fetch_assoc($sql)) {
         echo "<li>$value</li>";}; ?>
             </ol>
         </div>
-        <div class="detail-element">
+        <!-- <div class="detail-element">
             <h4 class="detail-subtitle roboto">NUTRITION</h4>
             <p class="roboto"><?php echo $row['recipeNutrition']; ?> </p>
         </div>
         <div class="detail-element">
             <h4 class="detail-subtitle roboto">ADDITIONAL DETAILS</h4>
             <p class="roboto"><?php echo $row['recipeDetails']; ?> </p>
-        </div>
+        </div> -->
     </div>
 <?php
 }

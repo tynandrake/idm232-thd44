@@ -7,6 +7,7 @@ $sql = 'SELECT id, recipeTitle, recipeImage ';
 $sql .= 'FROM recipe';
 $db_results = mysqli_query($con, $sql);
 $query = $_GET['recipeSearch'];
+
 ?>
 
 <html>
@@ -25,12 +26,20 @@ $query = $_GET['recipeSearch'];
         <div>
             <?php
             while ($row = mysqli_fetch_assoc($db_results)) {
-            if (!str_contains(strtoupper($row['recipeTitle']), strtoupper($query))) {
-            continue;
-            }
-                $id = $row['id'];
-                $recipeTitle = $row['recipeTitle'];
-                $recipeImage = $row['recipeImage'];
+            $id = $row['id'];
+            $recipeTitle = $row['recipeTitle'];
+            $recipeImage = $row['recipeImage'];
+
+                if (!function_exists('str_contains')) {
+                    function str_contains(string $haystack, string $needle): bool
+                    {
+                        return '' === $needle || false !== strpos($haystack, $needle);
+                    }
+                }
+
+                if (!str_contains(strtoupper($recipeTitle), strtoupper($query))) {
+                    continue;
+                }
 
             echo "<div class='master-recipe-card roboto'>
                 <div class='master-recipe-card-image'>
@@ -43,13 +52,13 @@ $query = $_GET['recipeSearch'];
                     </a>
                     <div>
                         <div>
-                            <a href='../admin/update-recipe.php?id=" . $id . "'>
+                            <a href='update-recipe.php?id=" . $id . "'>
                                 <p>Edit</p>
                                 <img src=' ../images/edit.svg' alt='edit'>
                             </a>
                         </div>
                         <div>
-                            <a href='../admin/delete-recipe.php?id=" . $id . "'>
+                            <a href='delete-recipe.php?id=" . $id . "'>
                                 <p>Delete</p>
                                 <img src='../images/delete.svg' alt='delete'>
                             </a>

@@ -7,6 +7,10 @@ $sql = 'SELECT id, recipeTitle, recipeImage ';
 $sql .= 'FROM recipe';
 $db_results = mysqli_query($con, $sql);
 $query = $_GET['recipeSearchUser'];
+
+// error_reporting(-1);
+// ini_set('display_errors', 'true');
+
 ?>
 
 <html>
@@ -25,12 +29,20 @@ $query = $_GET['recipeSearchUser'];
         <div>
             <?php
             while ($row = mysqli_fetch_assoc($db_results)) {
-                if (!str_contains(strtoupper($row['recipeTitle']), strtoupper($query))) {
+            $id = $row['id'];
+            $recipeTitle = $row['recipeTitle'];
+            $recipeImage = $row['recipeImage'];
+
+                if (!function_exists('str_contains')) {
+                    function str_contains(string $haystack, string $needle): bool
+                    {
+                        return '' === $needle || false !== strpos($haystack, $needle);
+                    }
+                }
+
+                if (!str_contains(strtoupper($recipeTitle), strtoupper($query))) {
                     continue;
                 }
-                $id = $row['id'];
-                $recipeTitle = $row['recipeTitle'];
-                $recipeImage = $row['recipeImage'];
 
                 echo "<div class='master-recipe-card roboto'>
                 <div class='master-recipe-card-image'>
@@ -38,7 +50,7 @@ $query = $_GET['recipeSearchUser'];
                 </div>
 
                 <div class=' master-recipe-card-text'>
-                    <a href='./users/recipe-detail.php?id=" . $id . "'>
+                    <a href='recipe-detail.php?id=" . $id . "'>
                         <h4 class='master-recipe-title'>" . $recipeTitle . "</h4>
                     </a>
                 </div>
